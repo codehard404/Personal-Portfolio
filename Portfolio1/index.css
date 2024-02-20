@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    color: #fff;
+    align-items: center;
+}
+
+body {
+    background-image: url('./portpic.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh; /* This ensures the background covers the entire viewport height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow: hidden;
+}
+
+body.contact-bg {
+    background-image: url('./portpic2.jpg');
+}
+
+body.about-bg {
+    background-image: url('./modern-1.jpg');
+}
+
+body.skills-bg {
+    background-image: url('./portpic2.jpg');
+}
+
+/*nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 90%;
+    margin: auto;
+    padding: 10px 10px;
+    background-color: #000000b5;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin-top: 1rem;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding: 8px;
+    background-color: transparent;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+li {
+    padding: 0rem 1.1rem;
+    float: left;
+}
+
+li a {
+    color: #e96d3f;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .7px;
+}
+
+ul li a {
+    position: relative;
+}
+
+ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+}
+
+/* Center Animation */
+ul li a::before {
+    transform: scale(0, 1);
+    transition: transform .3s ease;
+}
+
+ul li a:hover::before {
+    transform: scale(1, 1);
+}
+
+li a.active,
+li a:hover {
+    color: #fff;
+    transition: all .3s ease-in-out
+}
+
+#click {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+.about-section {
+    display: flex;
+    margin-top: 20px;
+    text-align: center;
+    /* Align text to the left */
+    padding: 80px;
+    /* Add padding for better appearance */
+}
+
+.active-about {
+    display:block;
+}
+
+.skills-section {
+    display: none;
+    margin-top: 20px;
+    text-align: right;
+    /* Align text to the left */
+    padding: 80px;
+    /* Add padding for better appearance */
+}
+
+.active-skills {
+    display: block;
+}
+
+.contact-section {
+    display: none;
+    margin-top: 20px;
+    text-align: right;
+    /* Align text to the left */
+    padding: 80px;
+    /* Add padding for better appearance */
+}
+
+.active-contact {
+    display: block;
+}
+
+.social-media-links {
+    margin-top: 20px;
+}
+
+.social-media-links a {
+    display: inline-block;
+    margin-right: 15px;
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-media-links i {
+    vertical-align: middle;
+}
+
+.main-container{
+    display:flex;
+    justify-content: space-between;
+    max-width: 90%;
+    background-color: #000000b5;
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    margin-top: 1rem;
+    padding: 2rem;
+    margin-left: 25cm;
+    margin-right: 1.7cm;
+}
+
+/* Contact details container */
+.contact-details-container {
+    width: 30%;
+    /* Adjust the width as needed */
+    padding: 1rem;
+}
+
+/* Main content container */
+.main-content-container {
+    width: 65%;
+    margin: 0;
+    /* Adjust the width as needed */
+}
+.about-section,
+.skills-section,
+.contact-section {
+    display: none;
+    margin-top: auto;
+    text-align: left;
+    /* Align text to the left */
+    padding: 1px;
+    /* Add padding for better appearance */
+}
+
+.active-section {
+    display: block;
+}
+
+/* Picture Section */
+.picture-section {
+    width: 30%; /* Adjust the width as needed */
+    padding: 1rem; /* Adjust padding as needed */
+}
+
+.picture-section img {
+    width: 200%; /* Make the image fill its container */
+    display: block; /* Ensure the image doesn't have any surrounding whitespace */
+    margin: auto; /* Center the image horizontally */
+    border-radius: 10px; /* Add rounded corners to the image */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to the image */
+    text-align: right;
+}
+/* Add transition effect to the text */
+.home-section .h2 {
+    transition: color 0.5s ease;
+}
+
+/* Change text color on hover */
+.home-section:hover h2 {
+    color: rgba(150, 48, 150, 0.885); /* Change to your desired hover color */
+}
+
+/* Fade-in effect for the welcome text */
+.welcome-text {
+    color: #fff;
+    opacity: 1;
+    animation: fadeIn 3s ease forwards;
+    
+}
+.welcome-texts {
+    color: #fff;
+    opacity: 1;
+    animation: fadeIn 3s ease forwards;
+    
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+@media only screen and (max-width:1024px) {
+    nav {
+        max-width: 98%;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    html {
+        font-size: 80%;
+    }
+
+    nav {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    html {
+        font-size: 85%;
+    }
+
+    header {
+        height: 100vh;
+    }
+
+    li {
+        padding: 10px 10px;
+    }
+
+    .menu {
+        display: block;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    ul {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        top: 4rem;
+        left: -100%;
+        background-color: #000000b5;
+        backdrop-filter: blur(10px);
+    }
+
+    #click:checked~ul {
+        left: 0%;
+        transition: all 0.3s ease;
+    }
+    
+
+}
+
+/* Style for login and sign up buttons */
+.container {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.container button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 9px;
+  font-weight: 600;
+  margin: 0 10px;
+  width: 100px;
+  padding: 9px 0;
+  box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
+  transition: 0.4s;
+}
+
+.container .reg {
+  color: #fff;
+  background-color: rgba(104, 85, 224, 1);
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.container .log {
+  color: #fff;
+  background-color: darkorchid;
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.container button:hover {
+  color: rgba(104, 85, 224, 1);
+  box-shadow: 0 0 20px #fff;
+  background-color: #fff;
+}
+
+.logo img {
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#png{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    height: 10px;
+    object-fit: cover;
+}
+
+.register-forget {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+ /* Glassmorphism Effect */
+ .glassmorphism-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    margin: auto;
+}
+
+.glassmorphism-container h2 {
+    text-align: center;
+    color: #fff;
+}
+
+.glassmorphism-container input,
+.glassmorphism-container button {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.glassmorphism-container button {
+    background-color: darkorchid;
+    color: white;
+    cursor: pointer;
+}
+
+.glassmorphism-container button:hover {
+    background-color: indigo;
+}
